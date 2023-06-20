@@ -15,13 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta
-            name="description"
-            content="ITX"
-          />
-          <meta 
-          name="keywords"
-          content="internet, radio internet, wifi, radio, business wifi"/>
+        <meta 
+        name="keywords"
+        content="internet, radio internet, wifi, radio, business wifi"/>
       <body className={nunitoSans.className}>{children}</body>
     </html>
   )
