@@ -1,0 +1,26 @@
+.main{
+     display: flex;
+     justify-content: space-evenly;
+     font-size: 18px;
+     color: var(--primary)
+}
+.imageContainer{
+     width: 153px;
+}
+.midSection{
+     font-size: 18px;
+     color: var(--primary);
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     gap: 20px;
+}
+#menu{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+     #menu{
+          display: block;
+     } 
+}
