@@ -2,14 +2,13 @@
      background-color: black;
      color: white;
      bottom: 0;
-     position: absolute;
-     padding: 2em !important;
+     padding: 2em;
+     width: 100vw;
      
      .mainContainer{
           display: grid;
           grid-template-columns: auto auto auto;
           width: 100vw;
-          padding: 2em;
      }
 
      .logoContainer, .supportContainer, .contact{
@@ -24,13 +23,12 @@
      }
 
      .divider{
-          margin: 2em 2em;
+          margin: 2em 0;
           opacity: 50%;
      }
 
      .footerText{
           font-size: 14px;
-          margin: 2em;
      }
 
 }
@@ -39,13 +37,16 @@
      .footerMain{
           .mainContainer{
                display: grid;
-               grid-template-columns: repeat(1, 3fr);
+               grid-template-columns: repeat(1, 1fr);
           }
           .supportContainer, .support{
                text-align: left;
           }
           .logoContainer, .supportContainer, .contact{
                margin: 2em 0;
+          }
+          .divider{
+               margin: 2em .5em;
           }
      }
 }
