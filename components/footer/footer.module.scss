@@ -1,0 +1,52 @@
+.footerMain{
+     background-color: black;
+     color: white;
+     bottom: 0;
+     position: absolute;
+     padding: 2em !important;
+     
+     .mainContainer{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          width: 100vw;
+          padding: 2em;
+     }
+
+     .logoContainer, .supportContainer, .contact{
+          
+          h2{
+               font-size: 16px
+          }
+          p{
+               font-size: 14px;
+               margin-top: 1em;
+          }
+     }
+
+     .divider{
+          margin: 2em 2em;
+          opacity: 50%;
+     }
+
+     .footerText{
+          font-size: 14px;
+          margin: 2em;
+     }
+
+}
+
+@media only screen and (max-width: 768px) {
+     .footerMain{
+          .mainContainer{
+               display: grid;
+               grid-template-columns: repeat(1, 3fr);
+          }
+          .supportContainer, .support{
+               text-align: left;
+          }
+          .logoContainer, .supportContainer, .contact{
+               margin: 2em 0;
+          }
+     }
+}
+

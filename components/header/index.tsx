@@ -16,12 +16,13 @@ export default function Header() {
     <main className={`${styles.main} ${inter.className}`}>
        <div className={styles.imageContainer}>
         <Image
-          fill
           alt='ITX Logo'
           src="/assets/full-logo.svg"
-          sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px"
+          height="50"
+          width="153"
+          // sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px"
         />
-      </div>
+      </div>  
 
       <div className={styles.midSection}>
           <div>Home</div>
@@ -34,7 +35,7 @@ export default function Header() {
           <Button describe='secondary'>Contact us</Button>
       </div>
 
-      <div className={styles.rightSection}>
+      <div className={styles.menuSection}>
           <IoMenuOutline size={30} id={styles.menu} onClick={() => setMenu(!menu)}/>
       </div>
     </main>
