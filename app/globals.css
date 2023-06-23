@@ -40,3 +40,34 @@ a {
     color-scheme: dark;
   }
 }
+
+
+/* Styling to change the appearance of the scroll bars */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin-right: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  opacity: .6;
+  border-radius: 5px;
+}
+/* the track (progress bar) NOT covered by the handle. */
+::-webkit-scrollbar-track-piece{
+  background: transparent;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  opacity: .7;
+  cursor: pointer;
+} */
