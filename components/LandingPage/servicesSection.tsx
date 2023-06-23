@@ -26,7 +26,6 @@ export default function ServicesSection() {
                {services.map((v,i) => 
                     <div key={i} className={styles.servicesBox}>
                          <div><Image src={v.image} width={64} height={64} style={{objectFit: 'contain'}} alt="Services Icon"/></div>
-
                          <h3>{v.text}</h3>
                     </div> 
                )}

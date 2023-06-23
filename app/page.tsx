@@ -4,6 +4,7 @@ import FooterSection from '@/components/footer';
 import HomeSection from '@/components/LandingPage/homeSection';
 import NumberSection from '@/components/LandingPage/numberSetion';
 import ServicesSection from '@/components/LandingPage/servicesSection';
+import CoverageSection from '@/components/LandingPage/coverageSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <NumberSection/>
 
       <ServicesSection/>
+
+      <CoverageSection/>
 
       <FooterSection/>
     </main>
