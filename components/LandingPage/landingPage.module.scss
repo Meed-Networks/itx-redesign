@@ -56,6 +56,39 @@
           }
      }
 }
+
+.servicesContainer{
+     width: 100vw;
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+
+     .servicesBox{
+          border-radius: 20px;
+          background: #FFF;
+          box-shadow: 0px 2px 10px 2px rgba(0, 34, 57, 0.12);
+          padding: 1em;
+          div{
+               margin: auto;
+               height: 100px;
+               width: 100px;
+               border-radius: 20px;
+               background: rgba(104, 225, 253, 0.15);
+               img{
+                    margin: auto;
+               }
+          }
+
+          h3{
+               color: var(--primary);
+               margin-top: 1em;
+               text-align: center;
+               font-size: 24px;
+               font-weight: 400;
+               font-family: 'Nunito Sans';
+          }
+          
+     }
+}
 @media only screen and (max-width: 768px) {
      .homeContainer{
           display: grid;
