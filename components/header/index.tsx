@@ -4,10 +4,9 @@ import Image from 'next/image'
 import { Button } from '../button'
 import { useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
-import { Inter } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 
-
-const inter = Inter({ subsets: ['latin']});
+const inter = Nunito_Sans({ subsets: ['latin']});
 
 export default function Header() {
   const [menu, setMenu] = useState(false);
@@ -18,17 +17,17 @@ export default function Header() {
         <Image
           alt='ITX Logo'
           src="/assets/full-logo.svg"
-          height="50"
-          width="153"
+          height="70"
+          width="215"
           // sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px"
         />
       </div>  
 
       <div className={styles.midSection}>
-          <div>Home</div>
-          <div>Services</div>
-          <div>Pricing</div>
-          <div>FAQ</div>
+          <h3>Home</h3>
+          <h3>Services</h3>
+          <h3>Pricing</h3>
+          <h3>FAQ</h3>
       </div>
 
       <div className={styles.rightSection}>
