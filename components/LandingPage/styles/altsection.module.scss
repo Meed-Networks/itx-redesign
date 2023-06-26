@@ -4,6 +4,7 @@
      min-height: 100vh;
      width: 100vw;
      padding: 2em;
+     margin: 4em 0;
 
      display: grid;
      grid-template-columns: repeat(2, 1fr);
@@ -36,10 +37,31 @@
      .imageContainer{
           margin: auto;
           display: relative;
+          overflow: hidden;
 
-          .imageContainer:hover img{
+         .img{
+          // border-radius: 20px;
+          width: 100%;
+          transition: 0.5s all ease-in-out;
+         }
+
+     }
+     .imageContainer:hover .img{
           transform: scale(1.5) !important;
+          }
+}
+@media only screen and (max-width: 768px) {
+     .altSectionContainer{
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 1em;
+
+          h2{
+               font-size: 16px;
+          }
+
+          h3{
+               font-size: 14px;
           }
      }
 }
-
