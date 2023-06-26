@@ -11,6 +11,7 @@
           h1{
                font-size: 64px;
                font-weight: 500;
+               display: inline-block;
 
                .scribbleLine{
                     position: absolute;
@@ -57,41 +58,7 @@
      }
 }
 
-.servicesContainer{
-     width: 100vw;
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     gap: 3em;
-     padding: 2em;
-     margin: 4em 0;
 
-     .servicesBox{
-          border-radius: 20px;
-          background: #FFF;
-          box-shadow: 0px 2px 10px 2px rgba(0, 34, 57, 0.12);
-          padding: 1em;
-          div{
-               margin: auto;
-               height: 100px;
-               width: 100px;
-               border-radius: 20px;
-               background: rgba(104, 225, 253, 0.15);
-               img{
-                    margin: auto;
-               }
-          }
-
-          h3{
-               color: var(--primary);
-               margin-top: 1em;
-               text-align: center;
-               font-size: 24px;
-               font-weight: 400;
-               font-family: 'Nunito Sans';
-          }
-          
-     }
-}
 
 .coverageSection{
      width: 100vw;
@@ -108,10 +75,14 @@
           }
 
           .mapBox{
+               height: 100%;
                width: 100%;
                border: 2px solid red;
           }
      }
+}
+.leaflet-container{
+     height: 100%;
 }
 @media only screen and (max-width: 768px) {
      .homeContainer{
@@ -124,10 +95,20 @@
                text-align: left;
                color: var(--primary);
                h1{
-                    font-size: 32px;
+                    font-size: 42px;
+                    .scribbleLine{
+                         position: absolute;
+                         left: .5em;
+                         top: 33%;
+                    }
                }
                h3{
-                    font-size: 16px;
+                    font-size: 24px;
+                    margin: 1em 0;
+               }
+               button{
+                    font-size: 18px !important;
+                    margin: 1em 0;
                }
           }
      }
@@ -139,7 +120,12 @@
           gap: 10%;
      }
 
-     .servicesContainer{
-          grid-template-columns: repeat(2, 1fr);
+     
+
+     .coverageSection{
+          .twoSection{
+               display: grid;
+               grid-template-columns: repeat(1, 1fr);
+          }
      }
 }

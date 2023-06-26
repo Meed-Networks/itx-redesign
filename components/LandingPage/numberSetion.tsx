@@ -1,4 +1,4 @@
-import styles from './landingPage.module.scss';
+import styles from './styles/landingPage.module.scss';
 
 const data = [
      {

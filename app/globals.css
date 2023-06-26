@@ -7,6 +7,7 @@
 
     --primary: #002239;
     --secondary: #00AEEF;
+    --track-bg: #aab4bc60;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,23 +52,27 @@ a {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
-  margin-right: 5px;
+  background: var(--track-bg);
+  border-radius: 100vw;
+  margin-block: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
   opacity: .6;
-  border-radius: 5px;
+  border: .5px solid var(--track-bg);
+  border-radius: 100vw;
 }
 /* the track (progress bar) NOT covered by the handle. */
-::-webkit-scrollbar-track-piece{
-  background: transparent;
-}
+/* ::-webkit-scrollbar-track-piece{
+  background: #0022395e;
+  margin-right: -5px;
+  
+} */
 
 /* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
-  opacity: .7;
+::-webkit-scrollbar-thumb:hover {
+  opacity: .5;
   cursor: pointer;
-} */
+}

@@ -5,6 +5,7 @@ import HomeSection from '@/components/LandingPage/homeSection';
 import NumberSection from '@/components/LandingPage/numberSetion';
 import ServicesSection from '@/components/LandingPage/servicesSection';
 import CoverageSection from '@/components/LandingPage/coverageSection';
+import AltSection from '@/components/LandingPage/altSection';
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
       <ServicesSection/>
 
       <CoverageSection/>
+
+      <AltSection/>
 
       <FooterSection/>
     </main>

@@ -1,14 +1,16 @@
 'use client';
 
-import styles from './landingPage.module.scss';
+import styles from './styles/landingPage.module.scss';
+import "leaflet/dist/leaflet.css";
 import {MapContainer, TileLayer} from "react-leaflet";
 import { LatLngExpression } from 'leaflet';
+import SectionHeader from './sectionHeader';
 
 export default function CoverageSection() {
      const position = [9.0820, 8.6753]; //[51.505, -0.09]
      return(
           <section className={styles.coverageSection}>
-               {/* Title Component */}
+               <SectionHeader title="Our coverage"/>
                <section className={styles.twoSection}>
                     <div className={styles.textSection}>
                          <p>Our extensive coverage extends across a significant portion of the Federal Capital Territory (FCT), </p>

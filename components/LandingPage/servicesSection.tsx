@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import styles from './landingPage.module.scss';
+import styles from './styles/servicesSection.module.scss';
+import SectionHeader from './sectionHeader';
 
 const services = [
      {
@@ -23,12 +24,15 @@ const services = [
 export default function ServicesSection() {
      return(
           <section className={styles.servicesContainer}>
-               {services.map((v,i) => 
-                    <div key={i} className={styles.servicesBox}>
-                         <div><Image src={v.image} width={64} height={64} style={{objectFit: 'contain'}} alt="Services Icon"/></div>
-                         <h3>{v.text}</h3>
-                    </div> 
-               )}
+               <SectionHeader title="Our Services"/>
+               <div className={styles.servicesItem}>
+                    {services.map((v,i) => 
+                         <div key={i} className={styles.servicesBox}>
+                              <div><Image src={v.image} width={64} height={64} style={{objectFit: 'contain'}} alt="Services Icon"/></div>
+                              <h3>{v.text}</h3>
+                         </div> 
+                    )}
+               </div>
           </section>
      )
 }

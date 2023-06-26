@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Button } from '../button';
-import styles from './landingPage.module.scss';
+import styles from './styles/landingPage.module.scss';
 import { Line } from './line';
 
 export default function HomeSection() {
