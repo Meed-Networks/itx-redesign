@@ -64,6 +64,7 @@ a {
   border: .5px solid var(--track-bg);
   border-radius: 100vw;
 }
+
 /* the track (progress bar) NOT covered by the handle. */
 /* ::-webkit-scrollbar-track-piece{
   background: #0022395e;
