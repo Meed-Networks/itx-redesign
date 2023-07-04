@@ -13,29 +13,50 @@
                p{color: rgba(0, 34, 57, 0.70); margin-top: 1em;}
           }
      }
+
+     .plansSection{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 5em;
+          margin: 2em 0;
+     }
 }
 
 .priceContainer{
      box-shadow: 2px 4px 10px 0px rgba(0, 34, 57, 0.17);
      border-radius: 20px;
      background: rgba(0, 174, 239, 0.03);
+     padding: 2em;
+     color: var(--primary);
 
-     h2{font-size: 20px}
-     p{font-size: 32px}
+     h2{font-size: 20px; margin-bottom: .5em;}
+     h1{font-size: 38px; margin-bottom: .5em;}
 
      .properties{
-          margin: 0 2em;
+          margin: 2em 0;
           text-decoration: none;
           list-style-type: none;
+          text-align: left;
+
+          li{
+               margin-bottom: .5em;
+          }
      }
 
      .maxSpeed{
-          margin: 0 1em;
+          margin: 1em 0;
           font-size: 20px;
           text-align: center;
      }
 
      button{
-          margin: auto 2em;
+          margin: auto;
+          width: 80%;
+          font-weight: 500;
      }
+}
+
+.priceContainer:hover{
+     transform : translateY(-1em);
+     transition: .5s ease-in-out transform;
 }

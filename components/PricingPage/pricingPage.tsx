@@ -19,8 +19,9 @@ export default function PricingSection() {
                     </div>
               </div>
 
-              {prices[type].map((plan, i) => <Plan pricing={plan}/>)}
-               
+              <div className={styles.plansSection}>
+               {prices[type].map((plan, i) => <Plan pricing={plan}/>)}
+              </div>
           </section>
      )
 }
