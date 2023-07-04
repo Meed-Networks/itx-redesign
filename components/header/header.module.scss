@@ -7,31 +7,37 @@
      width: 100vw;
      padding: 0 2em;
      top: 0;
-     position: absolute;
-}
-.imageContainer{
-     width: 153px;
-}
-.midSection{
-     font-size: 16px;
-     color: var(--primary);
-     display: flex;
-     justify-content: space-around;
-     align-items: center;
-     gap: 40px;
-     cursor: pointer;
-     h3{
-          font-weight: 500;
+     position: relative;
+     border: 2px solid red;
+
+     .active{
+          color: var(--secondary) !important;
+     }
+
+     .imageContainer{
+          width: 153px;
+     }
+     .midSection{
           font-size: 16px;
+          color: var(--primary);
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          gap: 40px;
+          cursor: pointer;
+          h3{
+               font-weight: 500;
+               font-size: 16px;
+          }
+          h3:hover{
+               color: var(--secondary);
+               scale: 1.1;
+          }
+          
      }
-     h3:hover{
-          color: var(--secondary);
-          scale: 1.1;
+     .menuSection{
+          display: none;
      }
-       
-}
-.menuSection{
-    display: none;
 }
 
 @media only screen and (max-width: 768px) {

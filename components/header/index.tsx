@@ -5,10 +5,11 @@ import { Button } from '../button'
 import { useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
 import { Nunito_Sans } from 'next/font/google'
+import Link from 'next/link';
 
 const inter = Nunito_Sans({ subsets: ['latin']});
 
-export default function Header() {
+export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'faq'}) {
   const [menu, setMenu] = useState(false);
 
   return (
@@ -24,10 +25,10 @@ export default function Header() {
       </div>  
 
       <div className={styles.midSection}>
-          <h3>Home</h3>
-          <h3>Services</h3>
-          <h3>Pricing</h3>
-          <h3>FAQ</h3>
+          <Link href="/"><h3 className={(page == 'home') ? styles.active : ''}>Home</h3></Link>
+          <Link href="/services"><h3 className={(page == 'services') ? styles.active : ''}>Services</h3></Link>
+          <Link href="/pricing"><h3 className={(page == 'pricing') ? styles.active : ''}>Pricing</h3></Link>
+          <Link href="/faq"><h3 className={(page == 'faq') ? styles.active : ''}>FAQ</h3></Link>
       </div>
 
       <div className={styles.rightSection}>

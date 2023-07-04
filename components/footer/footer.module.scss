@@ -30,7 +30,12 @@
      .footerText{
           font-size: 14px;
      }
-
+     .ITXLogo{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          opacity: .05;
+     }
 }
 
 @media only screen and (max-width: 768px) {

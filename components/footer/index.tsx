@@ -44,7 +44,7 @@ export default function FooterSection() {
                     Copyright © {year}. Property of ITX Telecoms. All Rights Reserved.
                </div>
 
-               
+               <img src="/assets/ITX.svg" className={styles.ITXLogo} alt="ITX text Logo"/>
           </div>
      )
 }

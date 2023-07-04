@@ -11,7 +11,7 @@ import TestimonialSection from '@/components/LandingPage/testimonialSection';
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Header/>
+      <Header page="home"/>
 
       <HomeSection/>
 
