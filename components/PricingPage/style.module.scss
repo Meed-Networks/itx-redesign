@@ -14,3 +14,28 @@
           }
      }
 }
+
+.priceContainer{
+     box-shadow: 2px 4px 10px 0px rgba(0, 34, 57, 0.17);
+     border-radius: 20px;
+     background: rgba(0, 174, 239, 0.03);
+
+     h2{font-size: 20px}
+     p{font-size: 32px}
+
+     .properties{
+          margin: 0 2em;
+          text-decoration: none;
+          list-style-type: none;
+     }
+
+     .maxSpeed{
+          margin: 0 1em;
+          font-size: 20px;
+          text-align: center;
+     }
+
+     button{
+          margin: auto 2em;
+     }
+}

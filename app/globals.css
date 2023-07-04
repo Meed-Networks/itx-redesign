@@ -18,6 +18,10 @@
 .secondary{
   color: var(--secondary);
 }
+.smallText{
+  font-size: 10px !important;
+  color: inherit !important;
+}
 * {
   box-sizing: border-box;
   padding: 0;

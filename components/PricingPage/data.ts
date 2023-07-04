@@ -19,13 +19,23 @@ export const prices = {
                price: '25,500'
           },
      ],
-     corporate : {
-
-     }
-
+     corporate : [
+          {
+               name: "Family Max",
+               speed: "4Mb",
+               maxSpeed: "10Mb",
+               price: '25,500'
+          },
+     ]
+}
+export interface IPrice {
+     name: string,
+     speed: string,
+     maxSpeed: string,
+     price: string
 }
 
-const properties =  [
+export const properties =  [
      'Unlimited download',
      'High speed broadband',
      'Instant access',

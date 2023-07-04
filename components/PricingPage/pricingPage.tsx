@@ -2,9 +2,10 @@
 
 import { useState } from 'react';
 import styles from './style.module.scss';
-
+import { prices } from './data';
+import Plan from './planContainer';
 export default function PricingSection() {
-     const [type, setType] = useState("")
+     const [type, setType] = useState<'residential' | 'corporate'>("residential")
      return(
           <section className={styles.PricingContainer}>
               <div className={styles.header}>
@@ -17,6 +18,8 @@ export default function PricingSection() {
                          Residential
                     </div>
               </div>
+
+              {prices[type].map((plan, i) => <Plan pricing={plan}/>)}
                
           </section>
      )
