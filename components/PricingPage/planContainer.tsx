@@ -5,7 +5,7 @@ import {
 } from 'react-icons/io5'
 import { Button } from '../button';
 
-export default function Plan({pricing}:{pricing: IPrice}) {
+export default function Plan({pricing, type}:{pricing: IPrice, type: 'residential' | 'corporate'}) {
      return(
           <div className={styles.priceContainer}>
                <h2>{pricing.name}</h2>  
@@ -18,7 +18,7 @@ export default function Plan({pricing}:{pricing: IPrice}) {
                     </li>)}
                </ul>  
 
-               <h2 className={styles.maxSpeed}>up to {pricing.maxSpeed}<span className="smallText">/sec</span></h2> 
+               {type == 'residential' && <h2 className={styles.maxSpeed}>up to {pricing.maxSpeed}<span className="smallText">/sec</span></h2>} 
 
                <Button describe='outline'>N {pricing.price}</Button>     
           </div>

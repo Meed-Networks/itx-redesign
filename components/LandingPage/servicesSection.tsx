@@ -23,7 +23,7 @@ const services = [
 
 export default function ServicesSection() {
      return(
-          <section className={styles.servicesContainer}>
+          <section className={styles.servicesContainer} id="services">
                <SectionHeader title="Our Services"/>
                <div className={styles.servicesItem}>
                     {services.map((v,i) => 
