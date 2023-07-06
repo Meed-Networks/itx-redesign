@@ -1,0 +1,36 @@
+.contactContainer{
+     padding: 2em;
+     margin: 2em 0;
+
+     .header{
+          text-align: left;
+
+          h1{color: var(--primary); font-size: 24px; font-weight: 500;}
+          p{color: rgba(0, 34, 57, 0.70); margin-top: 1em;}
+     }
+
+     .formSection{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          
+          .img:hover{
+               scale:1.2;
+          }
+     }
+}
+
+.bottomContainer{
+     // display: grid;
+     // grid-template-columns: repeat(3, 1fr);
+     display: flex;
+     justify-content: space-between;
+
+     .text{
+          text-align: left;
+          color: var(--primary);
+
+          h2{font-size: 20px; font-weight: 700;margin-top: 2em;}
+          p{font-size: 16px; font-weight: 400; margin-top: 1em;}
+          b{font-size: 14px; font-weight: 700; margin-top: 1em;}
+     }
+}

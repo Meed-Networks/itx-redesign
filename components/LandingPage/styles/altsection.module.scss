@@ -29,7 +29,8 @@
                font-weight: 400;
           }
           button{
-               width: max-content;
+               min-width: max-content;
+               width: 30%;
                font-size: 16px;
           }
      }

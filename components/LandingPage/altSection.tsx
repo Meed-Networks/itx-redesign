@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '../button';
 import styles from './styles/altsection.module.scss';
+import Link from 'next/link';
 
 export default function AltSection() {
      return(
@@ -10,7 +11,7 @@ export default function AltSection() {
 
                     <h3>We are a broadband fiber/wireless internet company that specialize in providing and deploying unlimited internet to your home or office. Customer satisfaction is our top priority.</h3>
 
-                    <Button describe='white'>Explore Bundles</Button>
+                    <Link href="/contact"><Button describe='white'>Explore Bundles</Button></Link>
                </div>
 
                <div className={styles.imageContainer}>

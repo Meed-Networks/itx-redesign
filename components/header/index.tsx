@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 const inter = Nunito_Sans({ subsets: ['latin']});
 
-export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'faq'}) {
+export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'faq' | 'contact'}) {
   const [menu, setMenu] = useState(false);
 
   return (
@@ -39,7 +39,7 @@ export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'f
       </div>
 
       <div className={styles.rightSection}>
-          <Button describe='secondary'>Contact us</Button>
+        <Link href="/contact"><Button describe='secondary'>Contact us</Button></Link>
       </div>
 
       <div className={styles.menuSection}>
