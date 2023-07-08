@@ -13,7 +13,7 @@ export default function Plan({pricing, type}:{pricing: IPrice, type: 'residentia
 
                <ul className={styles.properties}>
                     {properties.map((v,i) => 
-                    <li>
+                    <li key={i}>
                     <IoCheckmark size="14" color="#00AEEF"/> {v}
                     </li>)}
                </ul>  

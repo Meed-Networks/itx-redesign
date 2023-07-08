@@ -16,15 +16,19 @@ export default function PricingSection() {
                     </div>
 
                     <div className={styles.ToggleButton}>
-                         <Toggle label="Residential" label2='Corporate' toggled={false} onClick={(state:boolean) => {
-                              if(state){setType('corporate')}
-                              else{setType('residential')}
-                              }}/>
+                         <Toggle 
+                              label="Residential" 
+                              label2='Corporate' 
+                              toggled={false} 
+                              onClick={(state:boolean) => {
+                                   if(state){setType('corporate')}
+                                   else{setType('residential')}
+                         }}/>
                     </div>
               </div>
 
               <div className={styles.plansSection}>
-               {prices[type].map((plan, i) => <Plan type={type} pricing={plan}/>)}
+               {prices[type].map((plan, i) => <Plan key={i} type={type} pricing={plan}/>)}
               </div>
           </section>
      )

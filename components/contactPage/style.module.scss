@@ -12,10 +12,6 @@
      .formSection{
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          
-          .img:hover{
-               scale:1.2;
-          }
      }
 }
 
@@ -32,5 +28,8 @@
           h2{font-size: 20px; font-weight: 700;margin-top: 2em;}
           p{font-size: 16px; font-weight: 400; margin-top: 1em;}
           b{font-size: 14px; font-weight: 700; margin-top: 1em;}
+     }
+     .img:hover{
+          scale: 1.1;
      }
 }

@@ -15,7 +15,7 @@ export default function ContactSection() {
 
               <div className={styles.formSection}>
                <div>hello</div>
-               <Image src="/assets/contact.svg" className={styles.img} height="600" width="300" alt="Form illustration"/>
+               <Image src="/assets/contact.svg"  height="600" width="300" alt="Form illustration"/>
               </div>
 
                <BottomSection/>

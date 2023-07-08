@@ -1,4 +1,7 @@
+import Accordion from '../accordion';
 import styles from './faq.module.scss';
+
+import {faq} from './faq';
 
 export const FAQ = () => {
 
@@ -16,7 +19,9 @@ export const FAQ = () => {
               </div>
 
               <div className={styles.plansSection}>
-               
+                {faq.map(({question, ans}, i) => 
+                    <Accordion accordionData={{question, ans}} key={i}/>
+               )}
               </div>
           </section>
     )
