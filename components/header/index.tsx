@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
 import { Nunito_Sans } from 'next/font/google'
 import Link from 'next/link';
+import { HamburgerMenu } from '../LandingPage/hamburgerMenu';
 
 const inter = Nunito_Sans({ subsets: ['latin']});
 
@@ -43,16 +44,10 @@ export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'f
       </div>
 
       <div className={styles.menuSection}>
-          <IoMenuOutline size={30} id={styles.menu} onClick={() => setMenu(!menu)}/>
+          <IoMenuOutline size={40} id={styles.menu} onClick={() => setMenu(!menu)}/>
       </div>
+
+      {menu && <HamburgerMenu page={page} setMenu={setMenu}/>}
     </main>
   )
-}
-
-export function MobileNavigation(){
-     return(
-          <div className={styles.mobileNavbar}>
-               
-          </div>
-     )
 }

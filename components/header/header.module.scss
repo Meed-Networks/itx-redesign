@@ -44,9 +44,9 @@
           padding: 1em .5em;
      }
      .midSection, .rightSection{
-          display: none;
+          display: none !important;
      }
      .menuSection{
-          display: block;
+          display: block !important;
      } 
 }
