@@ -12,16 +12,16 @@ const [isActive, setIsActive] = useState(false);
   return (
     <React.Fragment>
       <div className={styles.accordion}>
-          <div className="accordion-item">
-          <div
-               className="accordion-title"
-               onClick={() => setIsActive(!isActive)}
-          >
-               {isActive ? <IoChevronDown size="16px" color="#002239"/> : <IoChevronForward size="16px" color="#002239"/>}
-               <h2>{question}</h2>
-              
-          </div>
-          {isActive && <div className="accordion-content">{ans}</div>}
+          <div className={styles.accordionItem}>
+               <div
+                    className={styles.accordionTitle}
+                    onClick={() => setIsActive(!isActive)}
+               >
+                    {isActive ? <IoChevronDown size="30px" color="#002239"/> : <IoChevronForward size="30px" color="#002239"/>}
+                    <h2>{question}</h2>
+               
+               </div>
+               {isActive && <div className={styles.accordionContent}>{ans}</div>}
           </div>
           </div>
     </React.Fragment>

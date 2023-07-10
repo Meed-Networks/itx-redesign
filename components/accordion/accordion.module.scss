@@ -1,0 +1,15 @@
+.accordion{
+     margin-top: 2em;
+
+     .accordionTitle{
+          display: flex;
+          gap: 20px;
+          cursor: pointer;
+     }
+
+     .accordionContent{
+          margin-top: 2em;
+          margin-left: 50px;
+          transition: all 2s ease-in;
+     }
+}
