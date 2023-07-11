@@ -1,8 +1,5 @@
-'use client';
 import './globals.css';
 import { Nunito_Sans } from 'next/font/google'
-import { useTheme } from 'next-themes';
-import {useEffect} from 'react';
 
 const nunitoSans = Nunito_Sans({ subsets: ['latin']});
 
