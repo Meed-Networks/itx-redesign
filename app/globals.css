@@ -10,11 +10,7 @@
     --track-bg: #aab4bc60;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
+
 .secondary{
   color: var(--secondary);
 }
@@ -38,12 +34,6 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
 
 
