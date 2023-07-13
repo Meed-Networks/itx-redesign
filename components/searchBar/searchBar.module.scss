@@ -1,0 +1,46 @@
+.hidden {
+     visibility: hidden;
+ }
+ 
+ 
+ .searchbar {
+     background-color: transparent;
+     color: rgba(33, 41, 92, 0.6);
+     width: 100%;
+     margin: 1rem auto;
+     height: 60px;
+     border-radius: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     border: 2px solid var(--primary);
+     
+     div {
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;    
+         box-sizing: border-box;
+         padding: 0 1em;
+     }
+ 
+     .iconAndText {
+         display: flex;
+         align-items: center;
+         gap: 10px;
+     }
+     .cancelBtn{
+         cursor: pointer;
+     }
+     
+     input {
+         border: 0;
+         background: transparent;
+         color: var(--primary);
+         &:active, &:focus, &:focus-within {
+             outline: none;
+         }
+     }
+ }
+
+ 

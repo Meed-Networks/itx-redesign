@@ -2,8 +2,12 @@ import Accordion from '../accordion';
 import styles from './faq.module.scss';
 
 import {faq} from './faq';
+import { Searchbar } from '../searchBar';
 
 export const FAQ = () => {
+    const searchFaq = (s:string) =>{
+        console.log(s);
+    }
 
     return (
         <section className={styles.faqSection}>
@@ -14,7 +18,9 @@ export const FAQ = () => {
                     </div>
 
                     <div className={styles.searchBar}>
-                         
+                         <Searchbar 
+                         placeholder="Search for anything"
+                            onChange={(e) => searchFaq(e.target.value)}/>
                     </div>
               </div>
 
