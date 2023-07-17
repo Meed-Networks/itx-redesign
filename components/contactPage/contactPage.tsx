@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './style.module.scss';
 import Image from 'next/image';
 import BottomSection from './bottomSection';
+import ContactForm from './formSection';
 
 export default function ContactSection() {
      return(
@@ -14,8 +15,12 @@ export default function ContactSection() {
               </div>
 
               <div className={styles.formSection}>
-               <div>hello</div>
-               <Image src="/assets/contact.svg"  height="600" width="300" alt="Form illustration"/>
+               <ContactForm/>
+               <Image src="/assets/contact.svg"  
+               height="600" 
+               width="300" 
+               alt="Form illustration"
+               className={styles.contactImage}/>
               </div>
 
                <BottomSection/>

@@ -17,7 +17,7 @@ export const FAQ = () => {
                         <p>We have some frequently asked questions about ITX Telecoms</p>
                     </div>
 
-                    <div className={styles.searchBar}>
+                    <div className={styles.searchSection}>
                          <Searchbar 
                          placeholder="Search for anything"
                             onChange={(e) => searchFaq(e.target.value)}/>

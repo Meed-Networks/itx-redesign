@@ -1,0 +1,65 @@
+.inputGroup{  
+     text-align: left;
+     margin: 0.5rem 0;
+     position: relative;
+     width: 100%;
+ }
+ .textarea {
+     resize: none;
+   }
+ .inputGroup :is(select, input, textarea) {
+     width: 100%;
+     padding: 0 8px;
+     height: 41px;
+     margin: 5px 0;
+     border: 1px solid var(--primary);
+     border-radius: 8px;
+     font-family: 'Montserrat', sans-serif;
+     font-weight: 400;
+     font-size: 16px;
+     box-sizing: border-box;
+    
+     &::placeholder {
+         font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif , 'sans-serif';
+         opacity: .7;
+     }
+ 
+     &:focus-visible, &:focus-within, &:focus {
+         border: 0 !important;
+     }
+ }
+ 
+ .inputGroup :is(textarea){
+     padding: 8px;
+     height: 120px;
+ }
+ 
+ .textAdded{
+     bottom: 52%;
+ }
+ .errorText{
+     color: red;
+     font-size: 12px;
+     font-weight: 700;
+     display: block;
+ }
+ 
+ .goodText{
+     color: green;
+     font-size: 12px;
+     font-weight: 700;
+     display: block;
+ }
+ 
+ .inputLabel{
+     font-weight: 500;
+     font-family: 'Nunito Sans', Verdana, Geneva, Tahoma, sans-serif , 'sans-serif';
+     color: var(--primary);
+     font-size: 16px;
+ }
+  
+ @media screen and (min-width: 800px) {
+     .inputGroup{
+         margin: 1rem 0;
+     }    
+ }

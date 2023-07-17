@@ -1,16 +1,21 @@
+'use client';
 import styles from './styles/landingPage.module.scss';
+import CountUp from 'react-countup';
 
 const data = [
      {
-          number: "200+",
+          number: 23,
+          suffix: "+",
           text: "customers that trust us"
      },
      {
-          number: "99%",
+          number: 99,
+          suffix: "%",
           text: "network uptime"
      },
      {
-          number: "10+",
+          number: 8,
+          suffix: "+",
           text: "of experience"
      },
 ]
@@ -19,7 +24,18 @@ export default function NumberSection() {
           <section className={styles.numberContainer}>
                {data.map((v, i) => 
                     <div key={i} className={styles.numberBox}>
-                         <h1>{v.number}</h1>
+                         <CountUp 
+                         start={0} 
+                         end={v.number} 
+                         duration={2} 
+                         suffix={v.suffix}
+                         useEasing>
+                              {({ countUpRef }) => (
+                              <h1>
+                                   <span ref={countUpRef}/>
+                              </h1>
+                              )}
+                         </CountUp>
                          <p>{v.text}</p>
                     </div>               
                )}
