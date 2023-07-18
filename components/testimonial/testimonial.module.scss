@@ -1,0 +1,41 @@
+.viewTestimonialContainer{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-column-gap: 10%;
+     grid-row-gap: 20%;
+     margin: 2em 2em;
+}
+.testimonialContainer:hover{
+     scale: 1.1;
+     cursor: pointer;
+     transition: scale 1s;
+}
+.testimonialContainer{
+     background-color: var(--primary);
+     color: white;
+     padding: 1em;
+     position: relative;
+     border-radius: 15px;
+     .image{
+          position: absolute;
+          right: 0;
+          top: .25em;
+          opacity: .3;
+     }
+     .ratingIcons{
+          margin-right: .25em;
+          border-radius: 5px;
+     }
+     .textSection{
+          margin: .7em auto;
+     }
+     .author{
+          font-size: 12px;
+     }
+     .location{
+          font-size: 12px;
+          opacity: .9;
+     }
+
+     
+}

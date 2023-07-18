@@ -40,7 +40,7 @@ export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'f
       </div>
 
       <div className={styles.rightSection}>
-        <Link href="/contact"><Button describe='secondary'>Contact us</Button></Link>
+        <Link href="/contact"><Button describe='outline'>Contact us</Button></Link>
       </div>
 
       <div className={styles.menuSection}>
