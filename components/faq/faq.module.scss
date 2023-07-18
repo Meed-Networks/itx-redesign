@@ -18,3 +18,17 @@
           }
      }
 }
+
+@media only screen and (max-width: 768px) {
+     .faqSection{
+          .header{
+               display: flex;
+               flex-direction: column;
+          
+          .searchSection{
+               width: 90%;
+               margin-top: 1em;
+          }
+     }
+     }
+}

@@ -39,13 +39,12 @@
         
         input:checked + span {
           background-color: white;
+          color: white;
         }
         
         input:checked + span:before {
           transform: translateX(137px);
-          .labelText2{
-            color: white;
-          }
+         
         }
         .labelText2::after{
             color: white;

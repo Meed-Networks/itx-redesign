@@ -64,7 +64,17 @@
 
 
 @media only screen and (max-width: 768px) {
-     .plansSection{
-          grid-template-columns: repeat(3, 1fr);
+
+     .PricingContainer{     
+          .header{
+               flex-direction: column;
+
+               .textSection{
+                   margin-bottom: 2em;
+               }
+          }
+          .plansSection{
+               grid-template-columns: repeat(1, 1fr);
+          }
      }
 }
