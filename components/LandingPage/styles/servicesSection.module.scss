@@ -41,7 +41,9 @@
           margin: 10em 0;
           .servicesItem{
                gap: 5em;
-               grid-template-columns: repeat(2, 1fr);
+               grid-template-columns: repeat(1, 1fr);
+               width: 70%;
+               margin: auto;
           }
      }
 }

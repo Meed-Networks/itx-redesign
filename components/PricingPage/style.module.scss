@@ -60,3 +60,11 @@
      transform : translateY(-1em);
      transition: .5s ease-in-out transform;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+     .plansSection{
+          grid-template-columns: repeat(3, 1fr);
+     }
+}
