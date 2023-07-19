@@ -2,6 +2,7 @@
 import Header from '@/components/header';
 import styles from '../page.module.css';
 import { FAQ } from '@/components/faq';
+import FooterSection from '@/components/footer';
 
 export default function Pricing() {
      return (
@@ -9,6 +10,8 @@ export default function Pricing() {
          <Header page="faq"/>
 
          <FAQ/>
+
+         <FooterSection/>
      </main>
 )
 }   

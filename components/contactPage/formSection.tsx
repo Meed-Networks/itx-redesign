@@ -9,7 +9,7 @@ export default function ContactForm() {
 
      const buttonClick = (e:any) =>{
           e.preventDefault();
-          var formData = new FormData(document.querySelector('form'))
+          // var formData = new FormData(document.querySelector('form'))
           console.log(e)
      }
      return(
