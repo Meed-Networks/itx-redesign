@@ -29,9 +29,11 @@ export default function BottomSection() {
                {data.map(({image, title, text, bold},i) => 
                <div key={i} className={styles.text}>
                     <Image src={image} className={styles.img} height="60" width="60" alt=""/>
+                    <div className={styles.textSection}>
                     <h2>{title}</h2>
                     <p>{text}</p>
                     <b>{bold}</b>
+                    </div>
                </div>
                )}
           </section>

@@ -15,7 +15,8 @@
           top: 0;
           width: 70vw;
           background: white;
-          animation: slideIn .5s ease-in;
+          // animation: slideIn .5s ease-in;
+          transform: width 2s;
           height: 100vh;
           padding: 2em;
 

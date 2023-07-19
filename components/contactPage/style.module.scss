@@ -12,10 +12,15 @@
      .formSection{
           display: grid;
           grid-template-columns: repeat(2, 1fr);
+          height: max-content;
+          
+          .contactImage{
+               margin: auto;
+          }
      }
-}
+
 .contactForm{
-     padding: 2em 0;
+     padding: 2em 0;    
 
      button{
           width: 100%;
@@ -23,10 +28,9 @@
      }
 }
 .bottomContainer{
-     // display: grid;
-     // grid-template-columns: repeat(3, 1fr);
      display: flex;
      justify-content: space-between;
+     margin-top: 4em;
 
      .text{
           text-align: left;
@@ -38,5 +42,33 @@
      }
      .img:hover{
           scale: 1.1;
+     }
+}
+}
+@media only screen and (max-width: 768px) {
+     .contactContainer{
+          .formSection{   
+               grid-template-columns: repeat(1, 1fr);
+               .contactImage{
+                    display: none;
+                    border: 2px solid red;
+               }
+          }
+
+          .bottomContainer{
+               display: flex;
+               flex-direction: column;
+               gap: 4em;
+
+               .text{
+                    display: flex;
+                    align-items: stretch;
+                    gap: 1em;
+
+                    h2{font-size: 16px;margin-top: 0}
+                    p{font-size: 14px; margin-top: .5em;}
+                    b{font-size: 12px; margin-top: .5em;}
+               }
+          }
      }
 }
