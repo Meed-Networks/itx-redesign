@@ -5,19 +5,20 @@ import Image from 'next/image';
 import { InputGroup } from './Input/input';
 import { Button } from '../button';
 
-export default function ContactForm() {
-
+export default function ContactForm({sendMail}:{sendMail: Function}) {
      const buttonClick = (e:any) =>{
           e.preventDefault();
-          // var formData = new FormData(document.querySelector('form'))
-          console.log(e)
+          const entries = new FormData(e.target);
+          const data = Object.fromEntries(entries);
+          console.log(data);  
+          sendMail(data);
      }
      return(
-          <form className={styles.contactForm} onSubmit={(e) => console.log(e)}>
-               <InputGroup labelName='Full Name' placeholder='Firstname Lastname'/>
-               <InputGroup labelName='Email' placeholder='example@here.com'/>
-               <InputGroup labelName='Your message' multiple={5} placeholder='example@here.com'/>
-               <Button describe='secondary' onClick={buttonClick}>Submit</Button>
+          <form className={styles.contactForm} onSubmit={buttonClick}>
+               <InputGroup labelName='Full Name' name='name' placeholder='Firstname Lastname'/>
+               <InputGroup labelName='Email' name='email' placeholder='example@here.com'/>
+               <InputGroup labelName='Your message' name='message' multiple={5} placeholder='example@here.com'/>
+               <Button describe='secondary' type="submit">Submit</Button>
           </form>
      )
 }

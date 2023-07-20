@@ -6,18 +6,23 @@ import Image from 'next/image';
 import BottomSection from './bottomSection';
 import ContactForm from './formSection';
 import { Resend } from 'resend';
-import { EmailContainer } from '../Email';
+import { useMutation } from 'react-query';
+import { sendEmail } from '@/services/email';
+import { IEmail } from '@/app/api/email';
+// import { EmailContainer } from '../emails';
 
 export default function ContactSection() {
-     // const resend = new Resend(process.env.NODE_PUBLIC_EMAIL_KEY);
-     console.log(process.env.NODE_PUBLIC_EMAIL_KEY);//
-     const handlemailSend = ({email, name, message}:{email: string, name: string, message: string}) => {
-          // resend.sendEmail({
-          //      from: email,
-          //      to: 'hanifadedotun2k19@gmail.com',
-          //      subject: 'You have a new message',
-          //      react: <EmailContainer email={email} name={name} message={message} />,
-          // });
+     const sendEmailMutation = useMutation(sendEmail, {
+          onSuccess: (d) =>{
+               console.log(d)
+          },
+          onError:(e)=>{
+               console.log(e)
+          }
+     });
+     
+     const handlemailSend = async (data:IEmail) => {
+          sendEmailMutation.mutate(data);
      }
      return(
           <section className={styles.contactContainer}>
@@ -27,7 +32,7 @@ export default function ContactSection() {
               </div>
 
               <div className={styles.formSection}>
-               <ContactForm/>
+               <ContactForm sendMail={handlemailSend}/>
                <Image src="/assets/contact.svg"  
                height="400" 
                width="500" 

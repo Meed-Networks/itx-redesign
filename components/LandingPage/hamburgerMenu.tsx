@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import styles from './styles/hamburger.module.scss';
 import { IoCloseOutline } from 'react-icons/io5';
+import { Button } from '../button';
 
 export const HamburgerMenu = ({page, setMenu}:{page:'home' | 'services' | 'pricing' | 'faq' | 'contact', setMenu:Function}) => {
      return(
@@ -23,6 +24,7 @@ export const HamburgerMenu = ({page, setMenu}:{page:'home' | 'services' | 'prici
                     ><h3 className={(page == 'services') ? styles.active : ''}>Services</h3></Link>
                     <Link href="/pricing"><h3 className={(page == 'pricing') ? styles.active : ''}>Pricing</h3></Link>
                     <Link href="/faq"><h3 className={(page == 'faq') ? styles.active : ''}>FAQ</h3></Link>
+                    <Link href="/contact"><Button describe='outline'>Contact us</Button></Link>
                     </div>
                </div>
           </section>
