@@ -18,7 +18,21 @@
           }
      }
 }
-
+.emptyContainer{
+     margin: 2em auto;
+     display: flex; flex-direction: column;
+     .image{
+          margin: auto;
+          opacity: .7;
+     }
+     h2{
+          color: rgb(160, 160, 160);
+          opacity: .9;
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+     }
+}
 @media only screen and (max-width: 768px) {
      .faqSection{
           .header{
@@ -26,7 +40,7 @@
                flex-direction: column;
           
           .searchSection{
-               width: 90%;
+               width: 95%;
                margin-top: 1em;
           }
      }

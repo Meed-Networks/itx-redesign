@@ -10,6 +10,10 @@
     --track-bg: #aab4bc60;
 }
 
+body.backdrop-no-scroll {
+  height: 100vh;
+  overflow: hidden !important;
+}
 
 .secondary{
   color: var(--secondary);

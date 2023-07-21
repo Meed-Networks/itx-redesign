@@ -11,14 +11,16 @@ type SearchbarProps = {
   className?: string;
   onBlur?: React.FocusEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  resetSearch: () => void;
 };
 
 
-export const Searchbar: React.FC<SearchbarProps> = ({ onBlur, value, onChange, onFocus ,placeholder, className }) => {
+export const Searchbar: React.FC<SearchbarProps> = ({ onBlur, value, onChange, onFocus ,placeholder, className, resetSearch }) => {
     const textInputRef = useRef<HTMLInputElement>(null);
 
     const clearInput = () =>{
         if(textInputRef.current) textInputRef.current.value = '';
+        resetSearch();
     }
     return(
         <div className={styles.searchbar}>

@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
             ${(describe =='outline') && styles.outline}
             `}
         >
-            { isLoading ? "loading" : props.children }
+            { isLoading ? "sending..." : props.children }
         </button>
     )
 }

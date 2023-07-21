@@ -1,5 +1,5 @@
 
-import { IEmail } from '@/app/api/email';
+import { IEmail } from '@/app/api/email/route';
 import { axios } from './axios';
 
 

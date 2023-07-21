@@ -11,7 +11,7 @@
     top: 0;
     bottom: 0;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, .7);
     @include flex-center();
     z-index: 999;
     width: 100vw;
@@ -49,6 +49,13 @@
             right:.5rem;
             cursor: pointer;
         }
+        .cancelIcon:hover{
+            scale: 1.1;
+        }
+    }
+
+    .successIcon{
+        margin-top: 2em;
     }
 }
 
@@ -56,16 +63,24 @@
      color: var(--secondary);
      opacity: .9;
      font-size: 20px;
-     font-weight: 600;
-     margin-bottom: 2rem;
+     font-weight: 400;
+     margin: 2em auto;
      text-align: center;
      width: 100%;
      text-overflow: ellipsis;
      overflow: hidden;
  }
 
+ .errorText{
+    color: var(--primary);
+}
+
+ 
+
  @media only screen and (max-width: 768px) {
+    .modalBackdrop{
      .modalContainer{
           width: 80%;
      }
+    }
 }

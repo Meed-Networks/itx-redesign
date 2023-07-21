@@ -9,13 +9,13 @@ type ModalProps = {
      message?: string
 }
 
-export const SuccessModal: React.FC<ModalProps> = ({isOpen, closeModal, message}) => {    
+export const ErrorModal: React.FC<ModalProps> = ({isOpen, closeModal, message}) => {    
      return(
           <>
                <Modal isOpen={isOpen} closeModal={closeModal}>
-               <Image src="/assets/contact/mail_sent.svg" height={130} width={255} className={styles.successIcon} alt=""/>
-               <div className={styles.successText}>
-                    {(message) ? message: "Email sent successfully!"}
+               <Image src="/assets/contact/warn.svg" height={130} width={255} className={styles.successIcon} alt=""/>
+               <div className={`${styles.successText} ${styles.errorText}`}>
+                    {(message) ? message: "Could not send email, try again"}
                </div>
                </Modal>
           </>

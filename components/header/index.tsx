@@ -2,7 +2,7 @@
 import styles from './header.module.scss'
 import Image from 'next/image'
 import { Button } from '../button'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { IoMenuOutline } from 'react-icons/io5';
 import { Nunito_Sans } from 'next/font/google'
 import Link from 'next/link';
@@ -13,16 +13,29 @@ const inter = Nunito_Sans({ subsets: ['latin']});
 export default function Header({page}:{page:'home' | 'services' | 'pricing' | 'faq' | 'contact'}) {
   const [menu, setMenu] = useState(false);
 
+  useEffect(() => {
+    if(menu)
+        document.body.setAttribute('class', 'backdrop-no-scroll');
+    else
+        document.body.removeAttribute('class')
+
+    return () => {
+        document.body.removeAttribute('class')
+    }
+}, [menu])
+
   return (
     <main className={`${styles.main} ${inter.className}`}>
        <div className={styles.imageContainer}>
-        <Image
-          alt='ITX Logo'
-          src="/assets/full-logo.svg"
-          height="70"
-          width="215"
-          // sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px"
-        />
+        <Link href="/">
+          <Image
+            alt='ITX Logo'
+            src="/assets/full-logo.svg"
+            height="70"
+            width="215"
+            // sizes="(max-width: 768px) 100px, (max-width: 1200px) 150px"
+          />
+        </Link>
       </div>  
 
       <div className={styles.midSection}>

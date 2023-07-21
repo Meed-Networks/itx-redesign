@@ -8,16 +8,20 @@ import ContactForm from './formSection';
 import { Resend } from 'resend';
 import { useMutation } from 'react-query';
 import { sendEmail } from '@/services/email';
-import { IEmail } from '@/app/api/email';
+import { IEmail } from '@/app/api/email/route';
+import { SuccessModal } from '../Modal';
+import { ErrorModal } from '../Modal/errorModal';
 // import { EmailContainer } from '../emails';
 
 export default function ContactSection() {
+     const [emailDelivery, setEmailDelivery] = useState<'success' | 'error' | 'null'>('null')
      const sendEmailMutation = useMutation(sendEmail, {
           onSuccess: (d) =>{
-               console.log(d)
+               setEmailDelivery('success');
           },
           onError:(e)=>{
                console.log(e)
+               setEmailDelivery('error');
           }
      });
      
@@ -25,6 +29,9 @@ export default function ContactSection() {
           sendEmailMutation.mutate(data);
      }
      return(
+          <>
+          {emailDelivery == 'success' && <SuccessModal isOpen={true} closeModal={() => setEmailDelivery('null')}/>}
+          {emailDelivery == 'error' && <ErrorModal isOpen={true} closeModal={() => setEmailDelivery('null')}/>}
           <section className={styles.contactContainer}>
               <div className={styles.header}>
                     <h2>Contact Us</h2>
@@ -32,7 +39,7 @@ export default function ContactSection() {
               </div>
 
               <div className={styles.formSection}>
-               <ContactForm sendMail={handlemailSend}/>
+               <ContactForm sendMail={handlemailSend} loading={sendEmailMutation.isLoading}/>
                <Image src="/assets/contact.svg"  
                height="400" 
                width="500" 
@@ -42,5 +49,6 @@ export default function ContactSection() {
 
                <BottomSection/>
           </section>
+     </>
      )
 }

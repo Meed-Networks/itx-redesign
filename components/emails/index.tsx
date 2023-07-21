@@ -1,4 +1,4 @@
-import { IEmail } from '@/app/api/email';
+import { IEmail } from '@/app/api/email/route';
 import { Button } from '@react-email/button';
 import { Html } from '@react-email/html';
 import * as React from 'react';

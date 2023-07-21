@@ -1,12 +1,28 @@
 import Accordion from '../accordion';
 import styles from './faq.module.scss';
+import {useState} from 'react';
 
 import {faq} from './faq';
 import { Searchbar } from '../searchBar';
+import { NoFaqFound } from './noFaqFound';
 
 export const FAQ = () => {
+    const [faqData, setfaqData] = useState(faq);
+
     const searchFaq = (s:string) =>{
-        console.log(s);
+            setfaqData(
+            faq.filter(item => {
+                // var bd =  Object.values(item.db_values).map((val, ind)=> val);
+                return(
+                    item.question.toLowerCase().includes(s.toLowerCase())
+                )
+            }
+            )
+        )
+    }
+
+    const resetSearch = () => {
+        setfaqData(faq);
     }
 
     return (
@@ -19,15 +35,17 @@ export const FAQ = () => {
 
                     <div className={styles.searchSection}>
                          <Searchbar 
-                         placeholder="Search for anything"
-                            onChange={(e) => searchFaq(e.target.value)}/>
+                         placeholder="Search for questions"
+                         resetSearch={resetSearch}
+                         onChange={(e) => searchFaq(e.target.value)}/>
                     </div>
               </div>
 
               <div className={styles.plansSection}>
-                {faq.map(({question, ans}, i) => 
+                {faqData.map(({question, ans}, i) => 
                     <Accordion accordionData={{question, ans}} key={i}/>
                )}
+               {faqData.length < 1 && <NoFaqFound/>}
               </div>
           </section>
     )
