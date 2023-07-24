@@ -20,7 +20,7 @@ export const faq = [
                
                 2. Access Point: The cost of the access point is fixed at 27,000.
                
-               3. Subscription Fee: The subscription fee differs depending on the package you choose. Click here to see more`
+               3. Subscription Fee: The subscription fee differs depending on the package you choose.`
           ]
      },
      {

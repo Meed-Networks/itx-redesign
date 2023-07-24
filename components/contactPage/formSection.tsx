@@ -17,7 +17,7 @@ export default function ContactForm({sendMail, loading}:{sendMail: Function, loa
                <InputGroup labelName='Full Name' name='name' placeholder='Firstname Lastname'/>
                <InputGroup labelName='Email' name='email' placeholder='example@here.com'/>
                <InputGroup labelName='Your message' name='message' multiple={5} placeholder='example@here.com'/>
-               <Button describe='secondary' type="submit" isLoading={loading}>Submit</Button>
+               <Button describe='secondary' type="submit" isloading={loading}>Submit</Button>
           </form>
      )
 }

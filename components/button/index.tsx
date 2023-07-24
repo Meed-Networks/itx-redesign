@@ -3,17 +3,17 @@ import styles from './button.module.scss'
 import { ButtonHTMLAttributes } from 'react';
 
 interface ButtonProps extends React.DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
-    isLoading?: boolean;
+    isloading?: boolean;
     describe:'primary'|'white'|'secondary'|'outline';
     disabled?: boolean,
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {
-    const { isLoading, describe } = props;
+    const { isloading, describe } = props;
 
     return(
         <button 
-            disabled={isLoading}
+            disabled={isloading}
             id={props.id} 
             {...props} 
             className={`
@@ -25,7 +25,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
             ${(describe =='outline') && styles.outline}
             `}
         >
-            { isLoading ? "sending..." : props.children }
+            { isloading ? "sending..." : props.children }
         </button>
     )
 }

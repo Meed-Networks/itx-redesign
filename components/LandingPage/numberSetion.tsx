@@ -27,7 +27,9 @@ export default function NumberSection() {
                          <CountUp 
                          start={0} 
                          end={v.number} 
-                         duration={2} 
+                         enableScrollSpy
+                         scrollSpyOnce
+                         // duration={0} 
                          suffix={v.suffix}
                          useEasing>
                               {({ countUpRef }) => (

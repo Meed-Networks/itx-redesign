@@ -17,7 +17,7 @@
                .scribbleLine{
                     position: absolute;
                     left: .5em;
-                    top: 58%;
+                    top: 60%;
                }
           }
           h3{
@@ -38,6 +38,8 @@
           // position: relative;
      }
 }
+
+
 
 .numberContainer{
      padding: 0 10%;
@@ -87,9 +89,8 @@
 }
 @media only screen and (max-width: 768px) {
      .homeContainer{
-          display: grid;
-          grid-template-columns: repeat(1, 1fr);
-          grid-auto-flow: dense;
+          display: flex;
+          flex-direction: column-reverse;
           padding: .5em;
 
           .textSection{
@@ -100,7 +101,7 @@
                     .scribbleLine{
                          position: absolute;
                          left: .5em;
-                         top: 33%;
+                         top: 73%;
                     }
                }
                h3{

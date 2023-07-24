@@ -12,9 +12,8 @@ export const FAQ = () => {
     const searchFaq = (s:string) =>{
             setfaqData(
             faq.filter(item => {
-                // var bd =  Object.values(item.db_values).map((val, ind)=> val);
                 return(
-                    item.question.toLowerCase().includes(s.toLowerCase())
+                    item.ans[0].toLowerCase().includes(s.toLowerCase())
                 )
             }
             )

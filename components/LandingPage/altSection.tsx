@@ -11,7 +11,7 @@ export default function AltSection() {
 
                     <h3>We are a broadband fiber/wireless internet company that specialize in providing and deploying unlimited internet to your home or office. Customer satisfaction is our top priority.</h3>
 
-                    <Link href="/contact"><Button describe='white'>Explore Bundles</Button></Link>
+                    <Link href="/pricing"><Button describe='white'>Explore Bundles</Button></Link>
                </div>
 
                <div className={styles.imageContainer}>

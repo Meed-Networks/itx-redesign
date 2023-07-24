@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Button } from '../button';
 import styles from './styles/landingPage.module.scss';
 import { Line } from './line';
+import Link from 'next/link';
 
 export default function HomeSection() {
      return(
@@ -13,13 +14,14 @@ export default function HomeSection() {
 
                     <h3>Unlimited speed and freedom - no throttling, no limits.</h3>
 
-                    <Button describe='secondary'>Explore Bundles</Button>
+                    <Link href="/pricing"><Button describe='secondary'>Explore Bundles</Button></Link>
                </div>
 
                <div className={styles.imageContainer}>
                     <Image 
                     width= {606}
                     height= {500}
+                    className={styles.Homeimage}
                     style={{objectFit: "contain"}}
                     src='/assets/mast.svg'
                     alt="Image of a mast"

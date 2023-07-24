@@ -25,3 +25,8 @@ export const MapBarrel = dynamic(() => import("@/components/Map"), {
      loading: () => <p>loading Map...</p>,
      ssr: false
  })
+
+//  export const MapBarrel = async () => {
+//     const module = await import("@/components/Map");
+//     return module.default;
+//  }
