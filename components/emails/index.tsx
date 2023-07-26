@@ -108,7 +108,7 @@ export const htmlData = ({name, message, email}:IEmail) => {
               <tr>
                 <td>
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                      <tr><img src="/assets/logo.png" width="50px" height="50px"/></tr>
+                      <tr><img src="https://itx-redesign.vercel.app/assets/logo.png" width="75px" height="60px"/></tr>
                     <tr>
                       <td>
                         <table
@@ -128,22 +128,23 @@ export const htmlData = ({name, message, email}:IEmail) => {
                               class="padding message-content"
                             >
                               <h2>Hello <span class="secondary">ITX Telecoms</span>, you have a new message</h2>
-                              <h3>From <br/> <span class="secondary">${name}</span> <br/> <span class="secondary">${email}</span></h3>
+                              <h3><span class="secondary">${name}</span> <br/> <span class="secondary">${email}</span></h3>
                               <div class="form-container">${message}</div>
                           </tr>
                         </table>
                       </td>
                     </tr>
                     <tr>
-                </td>
-                <td style="
+                      <td style="
                       padding: 0 0 0 0;
                       font-size: 12px;
                       line-height: 25px;
                       color: #232323;
-                ">
-                &copy; ITX telecoms ${year}. All rights reserved.
-                </td>
+                      ">
+                      &copy; ITX telecoms ${year}. All rights reserved.
+                      </td>
+                      </tr>
+                      </td>
                     </tr>
                   </table>
                 </td>

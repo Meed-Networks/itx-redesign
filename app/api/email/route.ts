@@ -24,5 +24,4 @@ export async function POST(req: Request) {
     console.log(e);
     return NextResponse.json({ response: 'Unsuccessful' }, { status: 500 });
    })
-   return;
 }
