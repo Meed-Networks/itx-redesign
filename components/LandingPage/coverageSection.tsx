@@ -1,14 +1,9 @@
 'use client';
 
 import styles from './styles/landingPage.module.scss';
-import "leaflet/dist/leaflet.css";
-import {TileLayer, Popup, Marker} from "react-leaflet";
-import { LatLngExpression } from 'leaflet';
 import SectionHeader from './sectionHeader';
-import countries from './../../data/countries.json';
-import { MapBarrel } from '../Map/barrel';
-import { MapCoverageContainer } from '../Map/mapContainer';
-import ClientMap from '../Map';
+
+import { MapBox } from '../Map/mapBox';
 
 export default function CoverageSection() {
      const position = [9.0820, 8.6753]; //[51.505, -0.09]
@@ -31,18 +26,7 @@ export default function CoverageSection() {
                     </div>
 
                     <div className={styles.mapBox}>
-                         {/* <MapCoverageContainer/> */}
-                         {/* <MapContainer 
-                         center={position as LatLngExpression}
-                         zoom={13}
-                         scrollWheelZoom={false}>
-                              <TileLayer
-                              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                              />
-                         </MapContainer> */}
-                         {/* <MapBarrel/> */}
-                         
+                         <MapBox/>
                     </div>
                </section>
           </section>

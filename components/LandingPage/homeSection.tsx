@@ -19,7 +19,7 @@ export default function HomeSection() {
 
                <div className={styles.imageContainer}>
                     <Image 
-                    width= {606}
+                    width= {600}
                     height= {500}
                     className={styles.Homeimage}
                     style={{objectFit: "contain"}}

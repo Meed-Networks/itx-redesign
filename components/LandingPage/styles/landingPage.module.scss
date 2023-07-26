@@ -32,10 +32,10 @@
      }
 
      .imageContainer{
+          padding: 0;
           img{
                width: 100%;
           }
-          // position: relative;
      }
 }
 
@@ -101,7 +101,7 @@
                     .scribbleLine{
                          position: absolute;
                          left: .5em;
-                         top: 73%;
+                         top: 93%;
                     }
                }
                h3{
@@ -111,6 +111,7 @@
                button{
                     font-size: 18px !important;
                     margin: 1em 0;
+                    width: calc(100% - 1em);
                }
           }
      }

@@ -37,13 +37,16 @@
           padding: 0 15px 50px 15px !important;
         }
       }
+      .secondary{
+          color: #00AEEF;
+      }
       .form-container {
         margin-bottom: 24px;
         padding: 20px;
         border: 1px dashed #ccc;
       }
       .form-heading {
-        color: #2a2a2a;
+        color: #002239;
         font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
         font-weight: 400;
         text-align: left;
@@ -99,6 +102,7 @@
             <tr>
               <td>
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr><img src="/assets/logo.png" width="50px" height="50px"/></tr>
                   <tr>
                     <td>
                       <table
@@ -113,16 +117,27 @@
                               padding: 0 0 0 0;
                               font-size: 16px;
                               line-height: 25px;
-                              color: #232323;
+                              color: #002239;
                             "
                             class="padding message-content"
                           >
-                            <h2>New Contact Message</h2>
-                            <div class="form-container">${htmlData}</div>
-                          </td>
+                            <h2>Hello <span class="secondary">ITX Telecoms</span>, you have a new message</h2>
+                            <h3>From <br/> <span class="secondary">${name}</span> <br/> <span class="secondary">${email}</span></h3>
+                            <div class="form-container">${message}</div>
                         </tr>
                       </table>
                     </td>
+                  </tr>
+                  <tr>
+               </td>
+               <td style="
+                    padding: 0 0 0 0;
+                    font-size: 12px;
+                    line-height: 25px;
+                    color: #232323;
+               ">
+               &copy; ITX telecoms 2023. All rights reserved.
+               </td>
                   </tr>
                 </table>
               </td>

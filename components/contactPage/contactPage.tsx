@@ -5,7 +5,6 @@ import styles from './style.module.scss';
 import Image from 'next/image';
 import BottomSection from './bottomSection';
 import ContactForm from './formSection';
-import { Resend } from 'resend';
 import { useMutation } from 'react-query';
 import { sendEmail } from '@/services/email';
 import { IEmail } from '@/app/api/email/route';
@@ -39,7 +38,7 @@ export default function ContactSection() {
               </div>
 
               <div className={styles.formSection}>
-               <ContactForm sendMail={handlemailSend} loading={sendEmailMutation.isLoading}/>
+               <ContactForm sendMail={handlemailSend} loading={sendEmailMutation.isLoading || false}/>
                <Image src="/assets/contact.svg"  
                height="400" 
                width="500" 
