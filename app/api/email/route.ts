@@ -13,12 +13,14 @@ import { mailOptions, transporter } from '@/utils/nodemailer';
 
 export async function POST(req: Request) {
   const {name, email, message} = await req.json() as IEmail;
+  // return NextResponse.json({ response: 'Unsuccessful' }, { status: 500 });
   await transporter.sendMail({
     ...mailOptions,
     subject: `New Message from ${name}`,
     text:"A new ITX Message",
     html: htmlData({name, email, message})
-  }).then(() => {
+  }).then((d) => {
+    console.log(d);
     return NextResponse.json({ response: 'Successfull' }, { status: 200 });
    }).catch((e) => {
     console.log(e);

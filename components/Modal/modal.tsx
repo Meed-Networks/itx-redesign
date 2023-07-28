@@ -1,7 +1,7 @@
 import styles from './modal.module.scss';
 import {IoCloseOutline} from 'react-icons/io5';
 import { useEffect } from 'react';
-type ModalProps = {
+interface IModalProps {
     isOpen: boolean, //State to open the modal
     children?: JSX.Element | JSX.Element[],
     closeModal: Function | any,
@@ -11,7 +11,7 @@ type ModalProps = {
 }
 
 
-export const Modal: React.FC<ModalProps> = ({ isAlert, isOpen, children, closeModal, className, fixed=false }) => {    
+export const Modal = ({ isAlert, isOpen, children, closeModal, className, fixed=false }:IModalProps) => {    
     useEffect(() => {
         if(isOpen)
             document.body.setAttribute('class', 'backdrop-no-scroll');

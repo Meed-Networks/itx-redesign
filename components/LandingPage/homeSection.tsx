@@ -12,7 +12,7 @@ export default function HomeSection() {
                <div className={styles.textSection}>
                     <h1>Fast and <br/><span className="secondary">Unlimited <Line className={styles.scribbleLine} width="225" height="15"/><span></span></span> Internet</h1>
 
-                    <h3>Unlimited speed and freedom - no throttling, no limits.</h3>
+                    <h3>Unlimited download and freedom - no throttling, no limits.</h3>
 
                     <Link href="/pricing"><Button describe='secondary'>Explore Bundles</Button></Link>
                </div>

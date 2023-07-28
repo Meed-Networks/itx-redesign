@@ -3,13 +3,13 @@ import styles from './modal.module.scss';
 import {Modal} from './modal';
 import Image from 'next/image';
 
-type ModalProps = {
+interface ISuccessModalProps {
      isOpen: boolean, //State to open the modal
      closeModal: Function | any,
      message?: string
 }
 
-export const SuccessModal: React.FC<ModalProps> = ({isOpen, closeModal, message}) => {    
+export const SuccessModal = ({isOpen, closeModal, message}:ISuccessModalProps) => {    
      return(
           <>
                <Modal isOpen={isOpen} closeModal={closeModal}>

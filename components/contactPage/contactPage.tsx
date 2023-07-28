@@ -10,12 +10,15 @@ import { sendEmail } from '@/services/email';
 import { IEmail } from '@/app/api/email/route';
 import { SuccessModal } from '../Modal';
 import { ErrorModal } from '../Modal/errorModal';
+import { API_URL } from '@/services/axios';
 // import { EmailContainer } from '../emails';
 
 export default function ContactSection() {
-     const [emailDelivery, setEmailDelivery] = useState<'success' | 'error' | 'null'>('null')
+     const [emailDelivery, setEmailDelivery] = useState<'success' | 'error' | 'null'>('null');
+     const [loading, setLoading] = useState(false);
      const sendEmailMutation = useMutation(sendEmail, {
           onSuccess: (d) =>{
+               console.log(d);
                setEmailDelivery('success');
           },
           onError:(e)=>{
@@ -25,7 +28,21 @@ export default function ContactSection() {
      });
      
      const handlemailSend = async (data:IEmail) => {
-          sendEmailMutation.mutate(data);
+          // sendEmailMutation.mutate(data);
+          setLoading(true);
+          await fetch(`${API_URL}/email`, {
+               method: 'POST',
+               body: JSON.stringify(data),
+               next: { revalidate: 10 }
+          }).then(response =>{
+               if(response.ok){
+                    console.log(response.json()); 
+                    setEmailDelivery('success');
+               }else{
+                    setEmailDelivery('error');
+               }
+          })
+          setLoading(false);
      }
      return(
           <>
@@ -38,7 +55,7 @@ export default function ContactSection() {
               </div>
 
               <div className={styles.formSection}>
-               <ContactForm sendMail={handlemailSend} loading={sendEmailMutation.isLoading || false}/>
+               <ContactForm sendMail={handlemailSend} loading={loading}/>
                <Image src="/assets/contact.svg"  
                height="400" 
                width="500" 
