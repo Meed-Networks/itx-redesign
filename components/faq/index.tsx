@@ -13,7 +13,7 @@ export const FAQ = () => {
             setfaqData(
             faq.filter(item => {
                 return(
-                    item.ans[0].toLowerCase().includes(s.toLowerCase())
+                    item.ans.join().toLowerCase().includes(s.toLowerCase())
                 )
             }
             )

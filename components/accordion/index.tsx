@@ -21,7 +21,9 @@ const [isActive, setIsActive] = useState(false);
                     <h2>{question}</h2>
                
                </div>
-               {isActive && <div className={styles.accordionContent}>{ans}</div>}
+               {isActive && <div className={styles.accordionContent}>
+               {ans.map((a,i) => <p key={i}>{a}</p>)}
+               </div>}
           </div>
           </div>
     </React.Fragment>
