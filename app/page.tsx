@@ -7,13 +7,14 @@ import ServicesSection from '@/components/LandingPage/servicesSection';
 import CoverageSection from '@/components/LandingPage/coverageSection';
 import AltSection from '@/components/LandingPage/altSection';
 import TestimonialSection from '@/components/LandingPage/testimonialSection';
+import NewHomeSection from '@/components/LandingPage/newHomeSection';
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <Header page="home"/>
 
-      <HomeSection/>
+      <NewHomeSection/>
 
       <NumberSection/>
 
