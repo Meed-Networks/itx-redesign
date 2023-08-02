@@ -8,6 +8,7 @@ import CoverageSection from '@/components/LandingPage/coverageSection';
 import AltSection from '@/components/LandingPage/altSection';
 import TestimonialSection from '@/components/LandingPage/testimonialSection';
 import NewHomeSection from '@/components/LandingPage/newHomeSection';
+import { AdsContainer } from '@/components/LandingPage/adsSection';
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
       <Header page="home"/>
 
       <NewHomeSection/>
+
+      <AdsContainer/>
 
       <NumberSection/>
 

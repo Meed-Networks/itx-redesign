@@ -1,0 +1,29 @@
+.adsContainer{
+     width: 100vw;
+     // border: 2px solid red;
+     margin: 4em auto;
+     // height: 80vh;
+     height: auto;
+
+     .homeBox{
+          margin: auto;
+          width: max-content;
+          height:auto;
+          // height:  80vh;
+          .player{
+               border: none;
+               outline: none !important;
+          }
+     }
+}
+
+@media only screen and (max-width: 768px) {
+     .adsContainer{
+          height: max-content;
+          .homeBox{
+               margin: auto;
+               width: max-content;
+               height: max-content;
+          }    
+     }
+}
