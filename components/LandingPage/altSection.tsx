@@ -15,7 +15,7 @@ export default function AltSection() {
                </div>
 
                <div className={styles.imageContainer}>
-                    <Image src={'/assets/mast2.svg'} className={styles.img}  alt="A mast" width={300} height={500} style={{objectFit: 'contain'}}/>
+                    <Image src={'/assets/mast2.svg'} priority className={styles.img}  alt="A mast" width={300} height={500} style={{objectFit: 'contain'}}/>
                </div>
           </div>
      )

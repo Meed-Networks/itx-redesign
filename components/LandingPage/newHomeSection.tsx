@@ -43,6 +43,7 @@ export default function NewHomeSection() {
                          style={{objectFit: "cover"}}
                          src='/assets/home/mast1.svg'
                          alt="Image of a mast"
+                         priority
                          />
                     </SwiperSlide>
 
@@ -61,6 +62,7 @@ export default function NewHomeSection() {
                          style={{objectFit: "cover"}}
                          src='/assets/home/Nigeria-Telecommunication-Tower.jpg'
                          alt="Image of a mast"
+                         priority
                          />
                     </SwiperSlide>
 
