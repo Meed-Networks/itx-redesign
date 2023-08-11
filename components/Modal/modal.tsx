@@ -11,7 +11,7 @@ interface IModalProps {
 }
 
 
-export const Modal = ({ isAlert, isOpen, children, closeModal, className, fixed=false }:IModalProps) => {    
+export const Modal = ({ isAlert=false, isOpen, children, closeModal, className, fixed=false }:IModalProps) => {    
     useEffect(() => {
         if(isOpen)
             document.body.setAttribute('class', 'backdrop-no-scroll');
@@ -37,8 +37,4 @@ export const Modal = ({ isAlert, isOpen, children, closeModal, className, fixed=
             </div>
         </div>
     )
-}
-
-Modal.defaultProps = {
-    isAlert: false,
 }

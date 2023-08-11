@@ -13,7 +13,6 @@ export async function sendEmail(data: IEmail) {
     method: 'POST',
     body: JSON.stringify(data),
   }).then(response =>{
-    console.log(response);
     if(response.ok){
         //  console.log(response.json()); //first consume it in console.log
         return response.json(); //then consume it again, the error happens

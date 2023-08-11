@@ -14,7 +14,7 @@ export function MapBox(){
           zoom: 7
      }) 
      useEffect(() => {
-          console.log(map.features[0].properties.NAME_1);
+          // console.log(map.features[0].properties.NAME_1);
   
           function checkName(data:any) {
               return data.properties.NAME_1 == 'Federal Capital Territory';
@@ -28,7 +28,7 @@ export function MapBox(){
               resArr.push(i);
           }     
           setMapPolygon(result);
-          console.log(result);
+          // console.log(result);
      },[])
      const geojson = {
           type:'geojson',

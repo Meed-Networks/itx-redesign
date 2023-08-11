@@ -18,25 +18,22 @@ export default function ContactSection() {
      const [loading, setLoading] = useState(false);
      const sendEmailMutation = useMutation(sendEmail, {
           onSuccess: (d) =>{
-               console.log(d);
                setEmailDelivery('success');
           },
           onError:(e)=>{
-               console.log(e)
                setEmailDelivery('error');
           }
      });
      
      const handlemailSend = async (data:IEmail) => {
-          // sendEmailMutation.mutate(data);
           setLoading(true);
           await fetch(`${API_URL}/email`, {
                method: 'POST',
                body: JSON.stringify(data),
                next: { revalidate: 10 }
-          }).then(response =>{
+          }).then(async response =>{
+               const json = await response.json();
                if(response.ok){
-                    console.log(response.json()); 
                     setEmailDelivery('success');
                }else{
                     setEmailDelivery('error');
