@@ -22,30 +22,26 @@
           
           .textSection{
                position: absolute;
-               top: 10vh;
-               left: 2em;
+               bottom: 5vh;
+               left: 5vw;
                z-index: 30;
-               text-align: left;
+               text-align: center;
+               // border: 2px solid red;
+               width: 90vw;
                color: white;
                h1{
                     font-size: 64px;
                     font-weight: 500;
-                    display: inline-block;
-
-                    .scribbleLine{
-                         position: absolute;
-                         left: .5em;
-                         top: 60%;
-                    }
                }
                h3{
-                    margin: 2em 0;
+                    margin: 1em 0;
                     font-size: 24px;
                     font-family:'Nunito Sans';
                     font-weight: 400;
                }
                button{
-                    margin: 2em 0;
+                    margin: 2em auto;
+                    width: 50%;
                     color: white;
                     border-color: white;
                }
@@ -56,5 +52,10 @@
                z-index: 1;
                // background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.15) 100%), lightgray -662.259px 0px / 137.584% 100% no-repeat;
           }
+     }
+}
+@media only screen and (max-width: 768px) {
+     .button{
+          font-size: 14px;
      }
 }

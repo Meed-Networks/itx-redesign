@@ -28,7 +28,7 @@ export const AdsContainer = () => {
                          loop 
                          playing
                          muted
-                         url='/assets/ads/videoplayback.mp4'
+                         url='/assets/ads/itxAds1.mp4'
                          className={styles.player}
                          width='100%'
                          height='100%'

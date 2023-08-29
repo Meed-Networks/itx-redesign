@@ -41,8 +41,8 @@ export const FAQ = () => {
               </div>
 
               <div className={styles.plansSection}>
-                {faqData.map(({question, ans}, i) => 
-                    <Accordion accordionData={{question, ans}} key={i}/>
+                {faqData.map(({question, table, ans}, i) => 
+                    <Accordion accordionData={{question, ans, table}} key={i}/>
                )}
                {faqData.length < 1 && <NoFaqFound/>}
               </div>

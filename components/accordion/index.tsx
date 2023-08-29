@@ -4,10 +4,11 @@ import {
      IoChevronDown
 } from 'react-icons/io5';
 import styles from './accordion.module.scss';
+import { Faq2 } from '../faq/faqs';
 
-const Accordion = ({accordionData}:{accordionData :{question: string, ans:string[]}}) => {
+const Accordion = ({accordionData}:{accordionData :{question: string, ans:string[], table?:boolean,}}) => {
 const [isActive, setIsActive] = useState(false);
-  const { question, ans } = accordionData;
+  const { question, ans, table } = accordionData;
 
   return (
     <React.Fragment>
@@ -23,6 +24,7 @@ const [isActive, setIsActive] = useState(false);
                </div>
                {isActive && <div className={styles.accordionContent}>
                {ans.map((a,i) => <p key={i}>{a}</p>)}
+               {(table) ? <Faq2/>: ''}
                </div>}
           </div>
           </div>

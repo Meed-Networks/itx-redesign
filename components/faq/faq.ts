@@ -1,3 +1,4 @@
+
 export const faq = [
      {
           question: "What do I need for the installation?",
@@ -15,13 +16,8 @@ export const faq = [
      },
      {
           question: "What is the cost of installation?",
-          ans: [
-               `1. Radio Cost: The cost of the radio varies based on the distance between your house and our base station. Prices start from 31,000 and can go up to 55,000, subject to potential changes.`,
-               
-                `2. Access Point: The cost of the access point is fixed at 27,000.`,
-               
-               `3. Subscription Fee: The subscription fee differs depending on the package you choose.`
-          ]
+          table: true,
+          ans:["The cost of each device and its quantity is listed below:"]
      },
      {
           question: "Can I pay in installments?",

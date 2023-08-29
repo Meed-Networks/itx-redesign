@@ -33,6 +33,27 @@
           text-align: center;
      }
 }
+.table{
+     margin-top: 1em;
+     width: 60%;
+
+     table {
+          border: none;
+     }
+
+     td,th{
+          text-align: left;
+          padding: 5px;
+          border-bottom: 1px solid #aab4bc60;
+     }
+
+     th{
+          background-color: #002239;
+          color: white;
+     }
+
+     tr:hover {background-color: #ddd;}
+}
 @media only screen and (max-width: 768px) {
      .faqSection{
           .header{
@@ -44,5 +65,10 @@
                margin-top: 1em;
           }
      }
+     }
+     .table{
+          font-size: 10px;
+          width: 100%;
+          
      }
 }
