@@ -24,7 +24,6 @@ export const AdsContainer = () => {
                     >
                      <SwiperSlide className={styles.homeBox}>
                          <ReactPlayer 
-                         controls  
                          loop 
                          playing
                          muted
